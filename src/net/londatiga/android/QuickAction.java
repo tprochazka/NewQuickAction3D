@@ -82,9 +82,9 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
         mInflater 	 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (mOrientation == HORIZONTAL) {
-            setRootViewId(R.layout.popup_horizontal);
+            setRootViewId(R.layout.qa_popup_horizontal);
         } else {
-            setRootViewId(R.layout.popup_vertical);
+            setRootViewId(R.layout.qa_popup_vertical);
         }
 
         mAnimStyle 	= ANIM_AUTO;
@@ -156,9 +156,9 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		View container;
 		
 		if (mOrientation == HORIZONTAL) {
-            container = mInflater.inflate(R.layout.action_item_horizontal, null);
+            container = mInflater.inflate(R.layout.qa_action_item_horizontal, null);
         } else {
-            container = mInflater.inflate(R.layout.action_item_vertical, null);
+            container = mInflater.inflate(R.layout.qa_action_item_vertical, null);
         }
 		
 		ImageView img 	= (ImageView) container.findViewById(R.id.iv_icon);
@@ -198,7 +198,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		container.setClickable(true);
 			 
 		if (mOrientation == HORIZONTAL && mChildPos != 0) {
-            View separator = mInflater.inflate(R.layout.horiz_separator, null);
+            View separator = mInflater.inflate(R.layout.qa_horiz_separator, null);
             
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.FILL_PARENT);
             
